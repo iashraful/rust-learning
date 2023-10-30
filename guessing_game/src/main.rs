@@ -12,12 +12,12 @@ fn main() {
 
     loop {
         println!("Guess your number: ");
-        let mut tmp: String = String::new(); // This just allocate a memory location with empty/null value.
+        let mut guess: String = String::new(); // This just allocate a memory location with empty/null value.
         io::stdin()
-            .read_line(&mut tmp)
+            .read_line(&mut guess)
             .expect("Failed to get the input.");
 
-        let guess: u32 = match tmp.trim().parse() {
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid Input provided.");
@@ -31,7 +31,7 @@ fn main() {
         match guess.cmp(&random_num) {
             Ordering::Equal => {
                 guess_counter += 1;
-                println!("Congrats. You won! Tried {guess_counter} time(s).");
+                println!("Congrats. You won! Only {guess_counter} guess(es).");
                 break;
             }
             Ordering::Less => {
