@@ -30,6 +30,7 @@ fn main() {
 
         match guess.cmp(&random_num) {
             Ordering::Equal => {
+                guess_counter += 1;
                 println!("Congrats. You won! Tried {guess_counter} time(s).");
                 break;
             }
