@@ -1,0 +1,3 @@
+# Common Rust Practices
+
+I this common module I am going to practice variables, data types, mutability, etc...
