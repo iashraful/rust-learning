@@ -14,4 +14,16 @@ fn main() {
 
 fn another_function() {
     println!("This is from another function");
+
+    let x = {
+        let y = 5;
+        y + 5
+    };
+    println!("X value should be 10. X = {x}");
+
+    no_return_keyword_is_necessary();
+}
+
+fn no_return_keyword_is_necessary() -> i8 {
+    10
 }
