@@ -10,6 +10,7 @@ fn main() {
     println!("1000 and 1_000 are same as {a}");
     // Another function called
     another_function();
+    conditional_statements(12);
 }
 
 fn another_function() {
@@ -26,4 +27,12 @@ fn another_function() {
 
 fn no_return_keyword_is_necessary() -> i8 {
     10
+}
+
+fn conditional_statements(num: i16) {
+    if num < 10 {
+        println!("Condition is true.");
+    } else {
+        println!("Condition is false.")
+    }
 }
