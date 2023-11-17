@@ -11,6 +11,7 @@ fn main() {
     // Another function called
     another_function();
     conditional_statements(12);
+    loop_basics();
 }
 
 fn another_function() {
@@ -34,5 +35,30 @@ fn conditional_statements(num: i16) {
         println!("Condition is true.");
     } else {
         println!("Condition is false.")
+    }
+}
+
+fn loop_basics() {
+    let result = loop {
+        println!("looping...");
+        break 100;
+    };
+    println!("{result}");
+    // Loop with label. 
+    let mut counter = 0;
+    'counting_loop: loop {
+        println!("Counter {counter}");
+        let mut inner_counter = 0;
+        loop {
+            if inner_counter == 2 {
+                break;
+            }
+            if counter == 2 {
+                break 'counting_loop;
+            }
+            println!("Inner counter: {inner_counter}");
+            inner_counter += 1;
+        }
+        counter += 1
     }
 }
